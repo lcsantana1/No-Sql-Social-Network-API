@@ -65,18 +65,6 @@ module.exports = {
             });
     },
 
-    //deleteThought(req, res) {
-       // Thought.findOneAndRemove({ _id: req.params.thoughtId })
-           // .then((dbThoughtData) => {
-           //     if (!dbThoughtData) {
-           //         return res.status(404).json({ message: 'No thought with that ID' });
-            //    }
-            //    .catch((err) =>
-          //          console.log(err);
-        // res.status(500).json(err));
-   // });
-
-// },
-
 };
+
 
