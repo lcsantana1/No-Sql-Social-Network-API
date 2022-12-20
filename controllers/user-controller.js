@@ -30,9 +30,8 @@ module.exports = {
             .then((user) =>
                 !user
                     ? res.status(404).json({ message: 'No user with that ID' })
-                    : res.json(user)
+                    : res.json({ message: 'User has been deleted' })
             )
-            .then(() => res.json({ message: 'User and associated apps deleted!' }))
             .catch((err) => res.status(500).json(err));
     },
     updateUser(req, res) {
@@ -79,3 +78,4 @@ module.exports = {
             .catch((err) => res.status(500).json(err));
       }
 };
+

@@ -14,6 +14,7 @@ const userSchema = new Schema(
         unique:  true, 
         require: true,
         // need to look at mongoose documentation for matching (himt this will user regex)
+        match: [/.+@.+\..+/, 'Must match an email address!'],
     },
     thoughts: [
         {
@@ -44,7 +45,7 @@ userSchema
   // Getter
   .get(function () {
     return this.friends.length;
-  })
+  });
 
 
 // Initialize our User model
